@@ -19,3 +19,23 @@ function animate(){
 }
 
 animate()
+
+document.addEventListener("mouseover", (e) => {
+  // only for anchor links
+  if (e.target.tagName === 'A') { 
+    cursor.style.height = "50px"
+    cursor.style.width = " 50px"
+    inner.style.height = "20px"
+    inner.style.width = "20px"
+  }
+})
+
+document.addEventListener("mouseout", (e) => {
+  if (e.target.tagName === 'A') {
+    cursor.style.height = "40px"
+    cursor.style.width = " 40px"
+    inner.style.height = "0px"
+    inner.style.width = "0px"
+  }
+})
+    
